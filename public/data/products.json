@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Songket Minangkabau",
+    "image": "/images/songket-minangkabau.jpg",
+    "region": "Sumatera Barat",
+    "culture": "Minangkabau",
+    "short_story": "Ditenun tangan dengan motif Pucuak Rabuang, melambangkan keteguhan dan harapan.",
+    "maker": "Ibu Siti"
+  },
+  {
+    "name": "Batik Mega Mendung",
+    "image": "/images/batik-megamendung.jpg",
+    "region": "Cirebon, Jawa Barat",
+    "culture": "Cirebon",
+    "short_story": "Awan bertumpuk menjadi simbol ketenangan dan pengendalian diri dalam budaya pesisir Cirebon.",
+    "maker": "Pak Mulyadi"
+  },
+  {
+    "name": "Tenun Ikat Sumba",
+    "image": "/images/tenun-sumba.jpg",
+    "region": "Sumba, NTT",
+    "culture": "Sumba",
+    "short_story": "Warna alami dari daun indigo dan kulit kayu, ditenun berbulan-bulan dengan cerita leluhur.",
+    "maker": "Mama Maria"
+  },
+  {
+    "name": "Ukiran Kayu Jepara",
+    "image": "/images/ukiran-jepara.jpg",
+    "region": "Jepara, Jawa Tengah",
+    "culture": "Jawa",
+    "short_story": "Flora dan fauna laut Jawa dipahat detail, memadukan warisan Majapahit dan pengaruh pesisir.",
+    "maker": "Pak Hendra"
+  }
+]

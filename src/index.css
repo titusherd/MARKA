@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MARKA Design System - Color Palette Definition
+All colors MUST be HSL.
+
+Color Palette:
+- Heritage Emerald (#276155): Main accent, buttons, highlights
+- Ivory White (#FFFAF4): Main surface, backgrounds, cards
+- Vintage Gold (#C2A552): Subtle accent, icons, dividers, hover effects
+- Burnt Clay (#C96F4C): Warm accent, badges, microinteractions
+- Deep Charcoal (#222524): Main text, headlines
+*/
+
+@layer base {
+  :root {
+    /* MARKA Core Colors */
+    --heritage-emerald: 165 43% 27%;
+    --ivory-white: 33 100% 98%;
+    --vintage-gold: 44 48% 54%;
+    --burnt-clay: 17 53% 54%;
+    --deep-charcoal: 160 4% 14%;
+
+    /* Base semantic tokens mapped to MARKA palette */
+    --background: 33 100% 98%; /* Ivory White */
+    --foreground: 160 4% 14%; /* Deep Charcoal */
+
+    --card: 0 0% 100%; /* Pure white for cards */
+    --card-foreground: 160 4% 14%; /* Deep Charcoal */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 4% 14%;
+
+    /* Primary - Heritage Emerald */
+    --primary: 165 43% 27%;
+    --primary-foreground: 33 100% 98%;
+
+    /* Secondary - soft ivory variant */
+    --secondary: 33 30% 92%;
+    --secondary-foreground: 160 4% 14%;
+
+    /* Muted - very soft ivory */
+    --muted: 33 20% 94%;
+    --muted-foreground: 160 4% 45%;
+
+    /* Accent - Heritage Emerald (main CTA) */
+    --accent: 165 43% 27%;
+    --accent-foreground: 33 100% 98%;
+
+    /* Support tokens */
+    --cta: 165 43% 27%; /* Heritage Emerald */
+    --cta-foreground: 33 100% 98%;
+    --success: 165 43% 27%; /* Heritage Emerald */
+    --success-foreground: 33 100% 98%;
+
+    /* Gold accent - Vintage Gold */
+    --gold: 44 48% 54%;
+    --gold-foreground: 160 4% 14%;
+
+    /* Burnt Clay - warm accent */
+    --clay: 17 53% 54%;
+    --clay-foreground: 33 100% 98%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 33 100% 98%;
+
+    --border: 160 4% 88%;
+    --input: 160 4% 88%;
+    --ring: 165 43% 27%; /* Heritage Emerald */
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens with MARKA colors */
+    --gradient-hero: linear-gradient(135deg, hsl(165 43% 27%), hsl(165 43% 32%));
+    --gradient-subtle: linear-gradient(180deg, hsl(33 100% 98%), hsl(33 30% 95%));
+    --gradient-premium: linear-gradient(135deg, hsl(165 43% 27%), hsl(44 48% 54%));
+    --gradient-gold: linear-gradient(135deg, hsl(44 48% 54%), hsl(44 48% 48%));
+    --gradient-clay: linear-gradient(135deg, hsl(17 53% 54%), hsl(17 53% 48%));
+
+    --shadow-elegant: 0 10px 40px -15px hsl(165 43% 27% / 0.15);
+    --shadow-card: 0 4px 20px -5px hsl(160 4% 14% / 0.08);
+    --shadow-premium: 0 20px 60px -15px hsl(165 43% 27% / 0.2);
+    --shadow-floating: 0 8px 32px -8px hsl(165 43% 27% / 0.15);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Pattern overlay - subtle batik texture */
+    --pattern-opacity: 0.02;
+  }
+
+  .dark {
+    --background: 160 10% 10%;
+    --foreground: 33 100% 98%;
+
+    --card: 160 8% 12%;
+    --card-foreground: 33 100% 98%;
+
+    --popover: 160 8% 12%;
+    --popover-foreground: 33 100% 98%;
+
+    --primary: 165 43% 35%;
+    --primary-foreground: 33 100% 98%;
+
+    --secondary: 160 8% 18%;
+    --secondary-foreground: 33 100% 98%;
+
+    --muted: 160 8% 16%;
+    --muted-foreground: 33 20% 65%;
+
+    --accent: 165 43% 35%;
+    --accent-foreground: 33 100% 98%;
+
+    --cta: 165 43% 35%;
+    --cta-foreground: 33 100% 98%;
+    --success: 165 43% 35%;
+    --success-foreground: 33 100% 98%;
+
+    --gold: 44 48% 60%;
+    --gold-foreground: 160 4% 14%;
+
+    --clay: 17 53% 60%;
+    --clay-foreground: 33 100% 98%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 33 100% 98%;
+
+    --border: 160 8% 20%;
+    --input: 160 8% 20%;
+    --ring: 165 43% 35%;
+
+    --shadow-elegant: 0 10px 40px -15px hsl(0 0% 0% / 0.5);
+    --shadow-card: 0 4px 20px -5px hsl(0 0% 0% / 0.3);
+    --gradient-premium: linear-gradient(135deg, hsl(165 43% 35%), hsl(44 48% 60%));
+    --gradient-gold: linear-gradient(135deg, hsl(44 48% 60%), hsl(44 48% 50%));
+    --pattern-opacity: 0.04;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', 'Nunito', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Pattern overlay for subtle Indonesian motifs */
+  .pattern-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pattern-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: var(--pattern-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  /* Smooth hover scale */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Badge shine effect */
+  .badge-shine {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .badge-shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 70%
+    );
+    animation: shine 3s infinite;
+  }
+
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+  }
+
+  /* Floating action button */
+  .floating-action {
+    @apply fixed bottom-6 right-6 z-50;
+    @apply bg-accent text-accent-foreground;
+    @apply rounded-full shadow-lg;
+    @apply transition-all duration-300;
+  }
+
+  .floating-action:hover {
+    @apply scale-110;
+    box-shadow: 0 8px 30px -5px hsl(var(--accent) / 0.5);
+  }
+
+  /* Loading animation with batik motif */
+  @keyframes batik-spin {
+    0% {
+      transform: rotate(0deg) scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: rotate(180deg) scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+      opacity: 0.8;
+    }
+  }
+
+  .loading-batik {
+    animation: batik-spin 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-md;
+    @apply border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/30 backdrop-blur-md;
+    @apply border border-white/10;
+  }
+}
